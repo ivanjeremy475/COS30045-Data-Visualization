@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4.1 - SVG House & Coordinate System</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .svg-container {
+            background-color: #ffffff;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 15px;
+        }
+        .annotation-section {
+            margin-top: 30px;
+        }
+        img.annotated-img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #bbb;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">
+                <img src="assets/img/PowerIcon.png" alt="Power Logo" class="logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="televisions.html">Televisions</a>
+                <a href="about.html">About Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main style="padding: 20px;">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Exercise 4.1: SVG Shapes and Coordinate System</h1>
+            <p>
+                Demonstrating SVG primitive shapes, custom drawing features, 
+                and coordinate mapping in D3/SVG.
+            </p>
+        </section>
+
+        <!-- Step 1 & 4: SVG Picture Section -->
+        <section class="content-section">
+            <h2>Step 1 & 4: House and Garden SVG</h2>
+            <div class="svg-container">
+                <!-- SVG Canvas (600x400) -->
+                <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+                    
+                    <!-- 1. Sky Background (rect) -->
+                    <rect x="0" y="0" width="600" height="300" fill="#87CEEB" />
+
+                    <!-- 2. Sun (circle) -->
+                    <circle cx="500" cy="70" r="40" fill="#FFD700" stroke="#FFA500" stroke-width="3" />
+
+                    <!-- 3. Sun Rays (line) -->
+                    <line x1="500" y1="15" x2="500" y2="5" stroke="#FFA500" stroke-width="3" stroke-linecap="round" />
+                    <line x1="560" y1="70" x2="570" y2="70" stroke="#FFA500" stroke-width="3" stroke-linecap="round" />
+                    <line x1="440" y1="70" x2="430" y2="70" stroke="#FFA500" stroke-width="3" stroke-linecap="round" />
+
+                    <!-- 4. Cloud (path) -->
+                    <path d="M 100 80 Q 120 50 150 70 Q 180 50 200 80 Q 220 100 180 110 L 100 110 Z" fill="#FFFFFF" opacity="0.9" />
+
+                    <!-- 5. Grass Ground (rect) -->
+                    <rect x="0" y="300" width="600" height="100" fill="#2E8B57" />
+
+                    <!-- 6. Path to House (polyline) -->
+                    <polyline points="230,300 210,400 290,400 270,300" fill="#A9A9A9" stroke="#696969" stroke-width="2" />
+
+                    <!-- 7. Chimney (rect) -->
+                    <rect x="310" y="130" width="30" height="60" fill="#8B0000" stroke="#5C0000" stroke-width="2" />
+
+                    <!-- 8. House Main Body (rect) -->
+                    <rect x="180" y="200" width="140" height="100" fill="#F5F5DC" stroke="#D2B48C" stroke-width="3" />
+
+                    <!-- 9. House Roof (polygon) -->
+                    <polygon points="170,200 250,130 330,200" fill="#B22222" stroke="#8B0000" stroke-width="2" />
+
+                    <!-- 10. Front Door (rect & circle) -->
+                    <rect x="230" y="240" width="40" height="60" fill="#8B4513" stroke="#5C2E0B" stroke-width="2" />
+                    <circle cx="263" cy="270" r="3" fill="#FFD700" />
+
+                    <!-- 11. STEP 4: Windows Grouped (<g>) with Styling & Transforms -->
+                    <g id="house-windows" fill="#ADD8E6" stroke="#4682B4" stroke-width="3">
+                        <!-- Left Window -->
+                        <rect x="195" y="215" width="30" height="30" rx="3" ry="3" />
+                        <line x1="210" y1="215" x2="210" y2="245" />
+                        <line x1="195" y1="230" x2="225" y2="230" />
+
+                        <!-- Right Window (Positioned using transform & translate) -->
+                        <g transform="translate(80, 0)">
+                            <rect x="195" y="215" width="30" height="30" rx="3" ry="3" />
+                            <line x1="210" y1="215" x2="210" y2="245" />
+                            <line x1="195" y1="230" x2="225" y2="230" />
+                        </g>
+                    </g>
+
+                    <!-- 12. Garden Tree (rect & ellipse) -->
+                    <rect x="80" y="240" width="20" height="60" fill="#5C2E0B" />
+                    <ellipse cx="90" cy="220" rx="40" ry="50" fill="#228B22" stroke="#006400" stroke-width="2" />
+
+                    <!-- 13. Label Text (text) -->
+                    <text x="20" y="380" font-family="Arial" font-size="16" font-weight="bold" fill="#FFFFFF">My SVG House & Garden</text>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Step 2: Annotation Display Section -->
+        <section class="annotation-section">
+            <h2>Step 2: Coordinate System Mapping</h2>
+            <p>Below is the annotated image demonstrating how coordinates in the code correspond to the SVG output:</p>
+            <img src="assets/img/coordinates-annotation.png" alt="SVG Coordinate System Annotation" class="annotated-img">
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Appliance Energy Consumption Website</p>
+        <p>Created by: Ivan Jeremy</p>
+        <p>Generative AI was used to assist with website development and code explanations.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/scripts.js"></script>
+
+</body>
+</html>
