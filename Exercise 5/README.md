@@ -1,53 +1,64 @@
-# Exercise 5 – Multi-Chart Webpage
+# COS30045 – Data Visualisation  
+## Exercise 0.2 – Energy Website
 
-## Aim
-Create a variety of different chart types using **D3.js**.
+Welcome to **Exercise 0.2** for COS30045 Data Visualisation.
 
-## Purpose
-In previous exercises, we created simple charts such as a horizontal bar chart. In this exercise, you will extend your skills by building multiple chart types and presenting them on a webpage.
+In this exercise, you will build a simple **Energy Data Webpage** using **HTML, CSS, and JavaScript**. The purpose of this exercise is to familiarise you with the development workflow using **GitHub and VS Code**, while preparing the foundation for future data visualisation tasks.
 
-This activity focuses on using **D3 to visualise different types of data** and understanding when different charts are appropriate.
+---
 
-## Charts to Create
+# Objective
 
-Using the provided **TV energy consumption dataset** (or your own dataset), your webpage must include the following chart types:
+The objectives of this exercise are:
 
-- **Scatter Plot**  
-  Energy consumption vs star rating.
+- Understand how to use **GitHub for version control**
+- Practice **web development structure**
+- Build a **basic website**
+- Maintain **regular commits**
+- Identify commits that include **GenAI-generated code**
 
-- **Donut Chart**  
-  Energy consumption for different screen technologies across all TVs combined.
+---
 
-- **Bar Chart**  
-  Energy consumption for different screen technologies for **55-inch TVs only**.
+# Step 1 – Fork the Repository
 
-- **Line Chart**  
-  Spot power prices from **1998 to 2024** (either plot the average or include a line for each state).
+1. Open this repository.
+2. Click **Fork** at the top right of the page.
+3. This will create a copy of the repository in your GitHub account.
 
-You may use the **provided datasets** or your **own dataset**, but your webpage must include **one example of each chart type**.
+Example:
 
-## Preparation
+Original repository : "github.com/rishmaf/COS30045-Data-Visualization/energy-webpage"
 
-Before starting this exercise, it is recommended that you:
+Your forked repository : "github.com/yourusername/COS30045-Data-Visualization/energy-webpage"
 
-- Review this week's **lecture slides**
-- Review **Chapter 4 and Chapter 5 of Dufour and Meeks (2024)**
 
-## Instructions
+---
 
-Use the **forked repository that you created earlier for this unit**.
+# Step 2 – Clone the Repository
 
-1. Open your existing **forked repository**.
-2. Navigate to the **Exercise 5 folder**.
-3. Add your code and files for this exercise inside that folder.
-4. Build a webpage that displays the required charts using **D3.js**.
-5. Commit and push your changes regularly to your GitHub repository.
+Clone your forked repository to your local machine using **VS Code** or the terminal.
 
-## Submission
 
-Your **forked repository** will serve as your submission.
 
-Ensure that:
-- All Exercise 5 files are inside the **Exercise 5 folder**
-- Your code is pushed to GitHub
-- Your repository link is submitted through the submission system.
+# Step 3 – Project Structure
+
+
+Your project must follow the structure below.
+
+```bash
+energy-webpage-v1
+│
+├── css
+│   └── styles.css
+│
+├── js
+│   └── scripts.js
+│
+├── images
+│   └── PowerIcon.png
+│
+├── data
+│   └── data.csv
+│
+├── index.html
+└── README.md

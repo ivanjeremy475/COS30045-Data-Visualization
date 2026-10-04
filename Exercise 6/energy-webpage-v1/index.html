@@ -4,26 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Exercise 4.3 - Appliance Energy Consumption</title>
+    <title>Appliance Energy Consumption</title>
 
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-        .responsive-svg-container {
-            background-color: #ffffff;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            padding: 15px;
-            display: inline-block;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-top: 15px;
-        }
-    </style>
 </head>
 
 <body>
 
-  <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
     <header>
         <nav class="navbar">
 
@@ -33,15 +22,15 @@
             </a>
 
             <!-- Navigation Links -->
-             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="televisions.html">Televisions</a>
-                <a href="about.html">About Us</a>
-                <a href="svg.html" class="active">Exercise 4.1</a>
-            </div>
+           <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="televisions.html">Televisions</a>
+    <a href="about.html">About Us</a>
+</div>
 
         </nav>
     </header>
+
 
     <!-- Main Content -->
     <main>
@@ -56,6 +45,7 @@
                 about electricity consumption.
             </p>
         </section>
+
 
         <!-- Information Section -->
         <section class="content-section">
@@ -76,6 +66,54 @@
             </p>
 
         </section>
+
+
+
+        <!-- Exercise 6.1: Histogram Section -->
+        <section class="content-section">
+
+            <h2>TV Energy Consumption Histogram</h2>
+
+            <p>
+                This histogram shows how many televisions fall into each
+                range of labelled energy consumption (kWh per year).
+                Most TVs use between 0 and 800 kWh per year, while a
+                small number use much more.
+            </p>
+
+            <!-- Exercise 6.2: filter buttons are created here by interactions.js -->
+            <p class="filter-label">Filter by screen technology:</p>
+            <div id="filters_screen"></div>
+
+            <!-- Histogram is drawn here -->
+            <div id="histogram" class="responsive-svg-container"></div>
+
+            <p class="chart-source">
+                Data source: Energy Rating Data for household appliances -
+                Televisions (downloaded Jan 2026).
+            </p>
+
+        </section>
+
+
+
+        <!-- Exercise 6.3: Scatterplot Section -->
+        <section class="content-section">
+
+            <h2>TV Star Rating and Energy Consumption</h2>
+
+            <p>
+                Each dot is one television model. The chart shows how
+                energy consumption relates to star rating, with colour
+                showing the screen technology (LCD, LED or OLED).
+            </p>
+
+            <!-- Scatterplot is drawn here -->
+            <div id="scatterplot" class="responsive-svg-container"></div>
+
+        </section>
+
+
 
         <!-- FAQ Section -->
         <section class="faq-section">
@@ -99,6 +137,7 @@
 
             </div>
 
+
             <!-- FAQ Question 2 -->
             <div class="faq-item">
 
@@ -115,6 +154,7 @@
                 </div>
 
             </div>
+
 
             <!-- FAQ Question 3 -->
             <div class="faq-item">
@@ -135,14 +175,8 @@
 
         </section>
 
-        <!-- Exercise 4.3 Activity Section -->
-        <section class="content-section">
-            <h2>Exercise 4.3: D3 Set Up</h2>
-            <p>Setting up a responsive SVG container and canvas using D3.js.</p>
-            <div class="responsive-svg-container"></div>
-        </section>
-
     </main>
+
 
     <!-- Footer -->
     <footer>
@@ -162,10 +196,17 @@
 
     </footer>
 
-    <!-- JavaScript Files -->
-    <script src="assets/js/scripts.js"></script>
+
+    <!-- D3 and Exercise 6.1 histogram (order is important) -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/load-data.js"></script>
+    <script src="assets/js/shared-constants.js"></script>
+    <script src="assets/js/interactions.js"></script>
+    <script src="assets/js/histogram.js"></script>
+    <script src="assets/js/scatterplot.js"></script>
+
+    <!-- JavaScript -->
+    <script src="assets/js/scripts.js"></script>
 
 </body>
 </html>

@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 4.7 - Adding Labels</title>
 
+    <title>Exercise 4.7 - Appliance Energy Consumption</title>
+
+    <!-- Link to external CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         .responsive-svg-container {
@@ -13,6 +15,7 @@
             border-radius: 8px;
             padding: 15px;
             display: inline-block;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             margin-top: 15px;
         }
     </style>
@@ -20,38 +23,156 @@
 
 <body>
 
+    <!-- Navigation Bar -->
     <header>
         <nav class="navbar">
+
+            <!-- Logo links back to Home -->
             <a href="index.html" class="logo-link">
                 <img src="assets/img/PowerIcon.png" alt="Power Logo" class="logo">
             </a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
+
+            <!-- Navigation Links -->
+             <div class="nav-links">
+                <a href="index.html">Home</a>
                 <a href="televisions.html">Televisions</a>
                 <a href="about.html">About Us</a>
+                <a href="svg.html" class="active">Exercise 4.1</a>
             </div>
+
         </nav>
     </header>
 
-    <main style="padding: 20px;">
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
         <section class="hero">
-            <h1>Exercise 4.7: Adding Labels</h1>
+            <h1>Appliance Energy Consumption</h1>
+
             <p>
-                Grouping SVG elements with container groups (&lt;g&gt;) and attaching text labels for brand names and numerical count values.
+                Understanding how much energy household appliances use
+                can help Australian households make better decisions
+                about electricity consumption.
             </p>
         </section>
 
+
+        <!-- Information Section -->
         <section class="content-section">
-            <h2>D3 Interactive Canvas Container</h2>
+
+            <h2>Energy Consumption in Australia</h2>
+
+            <p>
+                Household appliances are an important part of everyday
+                life. Appliances such as televisions, refrigerators,
+                washing machines and air conditioners consume electricity
+                at different rates.
+            </p>
+
+            <p>
+                Understanding appliance energy consumption can help
+                households identify appliances that use more electricity
+                and make more informed decisions about their energy usage.
+            </p>
+
+        </section>
+
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+
+            <h2>Frequently Asked Questions</h2>
+
+            <!-- FAQ Question 1 -->
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    What is appliance energy consumption?
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Appliance energy consumption refers to the amount
+                        of electrical energy an appliance uses while it
+                        is operating.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- FAQ Question 2 -->
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Which household appliances use electricity?
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Common electrical appliances include televisions,
+                        refrigerators, washing machines, computers and
+                        air conditioners.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- FAQ Question 3 -->
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Why is it important to understand energy consumption?
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Understanding energy consumption can help people
+                        reduce unnecessary electricity usage and make
+                        more informed decisions about their appliances.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Exercise 4.7 Activity Section -->
+        <section class="content-section">
+            <h2>Exercise 4.7: Adding Labels</h2>
+            <p>
+                Grouping SVG elements with container groups (&lt;g&gt;) and attaching text labels for brand names and numerical count values.
+            </p>
             <div class="responsive-svg-container"></div>
         </section>
+
     </main>
 
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Appliance Energy Consumption Website</p>
-        <p>Created by: Ivan Jeremy</p>
+
+        <p>
+            &copy; 2026 Appliance Energy Consumption Website
+        </p>
+
+        <p>
+            Created by: Ivan Jeremy
+        </p>
+
+        <p>
+            Generative AI was used to assist with website development
+            and code explanations.
+        </p>
+
     </footer>
 
+
+    <!-- JavaScript Files -->
     <script src="assets/js/scripts.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="assets/js/main.js"></script>
