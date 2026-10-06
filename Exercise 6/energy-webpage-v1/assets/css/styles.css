@@ -30,15 +30,25 @@ body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo + site name sit side by side */
 .logo-link {
     display: flex;
     align-items: center;
+    gap: 12px;
+    text-decoration: none;
 }
 
 .logo {
     width: 55px;
     height: 55px;
     object-fit: contain;
+}
+
+.site-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #147d7d;
+    line-height: 1.2;
 }
 
 .nav-links {
@@ -290,5 +300,9 @@ footer p {
 
     .hero h1 {
         font-size: 30px;
+    }
+
+    .site-name {
+        font-size: 1.1rem;
     }
 }
